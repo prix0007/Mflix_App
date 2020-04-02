@@ -6,26 +6,6 @@ This is a short guide on setting up the system and environment dependencies
 required for the MFlix application to run.
 
 
-Project Structure
------------------
-
-Everything you will implement is located in the ``mflix/db.py`` file, which
-contains all database interfacing methods. The API will make calls to ``db.py``
-to interact with MongoDB.
-
-The unit tests in ``tests`` will test these database access methods directly,
-without going through the API. The UI will run these methods in integration
-tests, and therefore requires the full application to be running.
-
-The API layer is fully implemented, as is the UI. If you need to run on a port
-other than 5000, you can edit the ``index.html`` file in the build directory to
-modify the value of **window.host**.
-
-Please do not modify the API layer in any way, ``movies.py`` and ``user.py``
-under the **mflix/api** directory. Doing so will most likely result in the
-frontend application failing to validate some of the labs.
-
-
 Local Development Environment Configuration
 -------------------------------------------
 
@@ -184,9 +164,6 @@ MFlix uses MongoDB to persist all of its data.
 One of easiest ways to get up and running with MongoDB is to use MongoDB Atlas,
 a hosted and fully-managed database solution.
 
-If you have taken other MongoDB University courses like M001 or M121, you may
-already have an account - feel free to reuse that cluster for this course.
-
 *Note: Be advised that some of the UI aspects of Atlas may have changed since
 the inception of this README, therefore some of the screenshots in this file may
 be different from the actual Atlas UI interface.*
@@ -194,10 +171,6 @@ be different from the actual Atlas UI interface.*
 
 Using an existing MongoDB Atlas Account:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you already have a previous Atlas account created, perhaps because you've
-taken one of our other MongoDB university courses, you can repurpose it for
-M220P.
 
 Log-in to your Atlas account and create a new project named **M220** by clicking
 on the *Context* dropdown menu:
